@@ -1,0 +1,59 @@
+package ch05;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class HelloWorld
+ */
+//현재 클래스가 서블릿 클래스 라는것을 알리기 위해 사용하는 어노테이션.
+@WebServlet("/hello") //urlPatterns: 어떤 요청에 의하여 서블릿을 호출할 것인지 결정. (url Mapping) 
+public class HelloWorld extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public HelloWorld() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+    //get방식의 요청을 처리합니다.
+    //GET방식의 특징으로는 대표적으로 URL에 Parameter를 붙여서 전송한다는 것입니다.
+    //ex) http://khj93.tistory.com/test_api?param1=value1&param2=value2
+    //URL뒤에  ?  를 사용하여 Parameter를 작성하게 되고  &  을 붙여 여러개의 Parameter를 구분
+    //GET방식은 데이터를 전송하게 되며 URL에 Parameter를 전송하기 때문에 body영역을 사용하지 않는다.
+    //URL에 데이터를 실어 보내기 때문에 대용량 데이터 전송을 하기에는 제약이 있다.
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.append("<!doctype html><html><head><title>Hello World Servlet</title></head><body>")
+		.append("<h2>Hello World !! 세상에서 젤 기쁜건 라면먹기</h2><hr>")
+		.append("현재 날짜와 시간은: "+java.time.LocalDateTime.now())
+		.append("</body></html>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	//post방식의 요청을 처리합니다.
+	//get방식과 달리 body영역에 데이터를 실어 보냅니다. 데이터 전송양에 길이제한이 없습니다. 대용량 데이터를 보내는데 적합합니다.
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
