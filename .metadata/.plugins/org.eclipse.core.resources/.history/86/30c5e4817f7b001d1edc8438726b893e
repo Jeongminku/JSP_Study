@@ -1,0 +1,26 @@
+package ch07;
+//자바 빈
+public class Calculator {
+	//필드
+	private int n1;
+	private int n2;
+	private String op;
+	
+	
+	Calculator(){}
+	
+	//메소드
+	public long calc() {
+		long result = 0; //연산의 결과를 담을 변수.
+
+		switch (op) {
+			case "+": result = n1 + n2; break;
+			case "-": result = n1 - n2; break;
+			case "*": result = n1 * n2; break;
+			case "/": result = n1 / n2; break;
+		}
+		return result;
+	}
+		
+	
+}

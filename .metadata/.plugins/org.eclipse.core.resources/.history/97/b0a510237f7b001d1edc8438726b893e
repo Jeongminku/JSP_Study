@@ -1,0 +1,9 @@
+package ch07;
+
+public class Calculator {
+	//필드
+	private int n1;
+	private int n2;
+	private String op;
+	
+}

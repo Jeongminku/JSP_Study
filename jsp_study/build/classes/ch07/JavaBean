@@ -1,0 +1,6 @@
+자바빈(JavaBean)이란?
+	JSP에서 객체를 가져오기 위한 기법 -> 자바빈은 자바의 재활용 가능한 컴포넌트 모델을 말한다.
+		DTO(Data Transfer Object) 라고도 한다.
+
+	POJO(Plain Object Java Object) 구조. -> 특정기술이나 프레임워크에 종속하지 않고 기본 생성자와 멤버 변수에 대한 getter /setter메소드를 제공하는 자바 클래스.
+		ex) 예를들어 DB의 테이블 구조와 연동되어 데이터를 표현하기 위한 클래스를 엔티티 클래스 혹은 DO라고 하는데 기본적으로 테이블 칼럼에 해당하는 private 멤버 변수와 getter/setter메소드로 구성한다.

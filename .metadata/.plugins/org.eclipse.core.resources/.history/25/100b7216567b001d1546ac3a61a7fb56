@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> 로그인 폼 </h2>
+<lable for >ID: </lable><input type = "text" name = "id" size = "10" />
+<lable for >PW: </lable><input type = "text" name = "pw" size = "10" />
+<input type = "submit" value = "로그인" />
+
+</body>
+</html>

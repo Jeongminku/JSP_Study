@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> 로그인 폼 </h2>
+<hr>
+<form method = "post" action = "login">
+<div style="display: flex; flex-direction:row;">
+	<div>
+<lable for >ID: </lable><input type = "text" name = "id" size = "10" placeholder = "아이디" autofocus/>
+</br>
+<lable for >PW: </lable><input type = "password" name = "pw" size = "10" placeholder = "비밀번호"/>
+	</div>
+	<div>
+	<input type = "submit" value = "로그인" style="height:47px; width:50px; font-size:12px;"/>
+	</div>
+</div>
+</form>
+</body>
+</html>
