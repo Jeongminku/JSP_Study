@@ -23,7 +23,11 @@
 	 		<td>${i.count}</td>
 	 		<td><a href="/jsp_study/RegistController?action=info&id=${r.id}">${r.name}</a></td>
 	 		<td>${r.phone}</td>
-	 		<td>${r.grade}${r.kgrade}</td>
+	 		<td>
+	 		<c:if test="${r.grade eq 'silver'}">silver(일반)</c:if>
+	 		<c:if test="${r.grade eq 'gold'}">gold(주간)</c:if>
+	 		<c:if test="${r.grade == 'vip'}">vip(최상)</c:if>
+	 		</td>
 	 		
 	 	</tr>
 	 </c:forEach>
