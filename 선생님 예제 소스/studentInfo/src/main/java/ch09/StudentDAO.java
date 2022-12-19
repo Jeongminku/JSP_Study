@@ -52,9 +52,9 @@ public class StudentDAO {
 		}
 	}
 	
-	public List<Student> getAll() {
+	public ArrayList<Student> getAll() {
 		open();
-		List<Student> students = new ArrayList<>();
+		ArrayList<Student> students = new ArrayList<>();
 		
 		try {
 			pstmt = conn.prepareStatement("select * from student");

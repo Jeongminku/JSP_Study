@@ -19,7 +19,8 @@ create sequence id_seq
        nocycle
        nocache
        noorder;
-       
+
+drop sequence id_seq;
 
 insert into student values(id_seq.nextval, '김길동', 'AA대학교', '1999-10-21', 'kim@aa.com');      
 insert into student values(id_seq.nextval, '박사랑', 'BB대학교', '2000-01-21', 'park@bb.com'); 
