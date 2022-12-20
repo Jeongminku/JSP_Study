@@ -66,10 +66,7 @@ public class RegistController extends HttpServlet {
 		return "registGradeList.jsp";
 	}
 	
-	
-	/**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public RegistController() {
         super();
         // TODO Auto-generated constructor stub

@@ -6,15 +6,14 @@ public class Regist {
 	private String address;
 	private String grade;
 	private String phone;
-	private String kgrade;
+
 	
-	public Regist(String id, String name, String address, String grade, String phone, String kgrade){
+	public Regist(String id, String name, String address, String grade, String phone){
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.grade = grade;
 		this.phone = phone;
-		this.kgrade = kgrade;
 	}
 
 	public String getId() {
@@ -56,15 +55,5 @@ public class Regist {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-	public String getKgrade() {
-		return kgrade;
-	}
-
-	public void setKgrade(String kgrade) {
-		this.kgrade = kgrade;
-	}
-	
-	
 	
 }
